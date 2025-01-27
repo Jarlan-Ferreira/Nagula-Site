@@ -1,0 +1,335 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    line-height: 1.6;
+    background: linear-gradient(135deg, #1a1a1a, #333); /* Gradiente preto */
+}
+
+header {
+    background: rgba(255, 102, 0, 0.8); /* Laranja com transparência */
+    padding: 20px 0;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+header .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo img {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    color: #1a1a1a;
+    margin: 0;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #1a1a1a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #fff;
+}
+
+#hero {
+    background: url('background1.jpg') no-repeat center center/cover;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #fff;
+    position: relative;
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5); /* Overlay escuro para melhorar a legibilidade */
+    backdrop-filter: blur(5px); /* Desfoque */
+}
+
+#hero .hero-content {
+    position: relative;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+#hero h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+#hero .btn {
+    background: linear-gradient(135deg, #ff6600, #e65c00); /* Gradiente laranja */
+    color: #1a1a1a;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+#hero .btn:hover {
+    background: linear-gradient(135deg, #e65c00, #ff6600); /* Gradiente laranja invertido */
+}
+
+/* Seção Menu */
+#menu {
+    padding: 60px 20px;
+    background: rgba(38, 38, 38, 0.7); /* Fundo semi-transparente */
+    text-align: center;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+#menu h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6600; /* Cor laranja para o título */
+}
+
+.filtros {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.filtro-btn {
+    background: linear-gradient(135deg, #ff6600, #e65c00); /* Gradiente laranja */
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.filtro-btn.active {
+    background: linear-gradient(135deg, #e65c00, #ff6600); /* Gradiente laranja invertido */
+}
+
+.filtro-btn:hover {
+    background: linear-gradient(135deg, #e65c00, #ff6600); /* Gradiente laranja invertido */
+}
+
+.itens-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.item {
+    text-align: center;
+    background: rgba(51, 51, 51, 0.8); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+.item:hover {
+    transform: scale(1.05);
+}
+
+.item img {
+    width: 100%;
+    max-width: 200px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+button {
+    background: linear-gradient(135deg, #ff6600, #e65c00); /* Gradiente laranja */
+    color: #1a1a1a;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #e65c00, #ff6600); /* Gradiente laranja invertido */
+}
+
+/* Seção Sobre Nós */
+#sobre {
+    padding: 60px 20px;
+    background: rgba(26, 26, 26, 0.7); /* Fundo semi-transparente */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+#sobre h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6600; /* Cor laranja para o título */
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+/* Seção Contato */
+#contato {
+    padding: 60px 20px;
+    background: rgba(51, 51, 51, 0.751); /* Fundo semi-transparente */
+    color: #fff;
+    text-align: center;
+    margin: 0;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+#contato h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #ff6600; /* Cor laranja para o título */
+}
+
+#contato p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    color: #ff6600;
+    margin: 0 15px;
+    font-size: 2rem;
+    transition: color 0.3s;
+}
+
+.social-icons a:hover {
+    color: #e65c00;
+}
+
+/* Efeito Parallax */
+.parallax {
+    height: 300px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+
+.parallax::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4); /* Overlay escuro */
+    backdrop-filter: blur(5px); /* Desfoque */
+}
+
+#parallax1 {
+    background-image: url('background1.jpg');
+}
+
+#parallax2 {
+    background-image: url('background2.jpg');
+}
+
+#parallax3 {
+    background-image: url('background3.jpg');
+}
+
+/* Rodapé */
+footer {
+    background: rgba(255, 102, 0, 0.8); /* Laranja com transparência */
+    color: #1a1a1a;
+    text-align: center;
+    padding: 10px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+/* Carrinho */
+#carrinho {
+    position: fixed;
+    right: 20px;
+    top: 20px;
+    background: rgba(38, 38, 38, 0.8); /* Fundo semi-transparente */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    color: #fff;
+    backdrop-filter: blur(10px); /* Desfoque */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #hero h2 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1rem;
+    }
+
+    .item img {
+        max-width: 150px;
+    }
+}
